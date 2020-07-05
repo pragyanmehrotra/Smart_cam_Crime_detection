@@ -21,11 +21,14 @@ Smart surveillance camera, alert police in case of weapon detection for crime pr
 
 ### Bargraph of the classes of dataset
 
-![Bargraph]()
+![Bargraph](https://github.com/pragyanmehrotra/Smart_cam_Crime_detection/blob/master/bargraph.png)
 
 
 ## Results of the model
 
-![Accuracy]()
+![Accuracy](https://github.com/pragyanmehrotra/Smart_cam_Crime_detection/blob/master/accuracy.png)
 
-![Loss]()
+![Loss](https://github.com/pragyanmehrotra/Smart_cam_Crime_detection/blob/master/loss.png)
+
+
+_Thank You_
