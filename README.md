@@ -10,7 +10,7 @@ Smart surveillance camera, alert police in case of weapon detection for crime pr
 1. matplotlib
 
 ## Link to custom dataset
-> The naming convensions of the directories is changed to iterate through them , dictionaries can be used to but the found this easier
+> The naming convensions of the directories is changed to iterate through them , dictionaries can be used to but i found this easier
 
 [Custom dataset](https://drive.google.com/file/d/1SRxzPoi7Ht17So0btrtITTnipunrkKHf/view?usp=sharing)
 
