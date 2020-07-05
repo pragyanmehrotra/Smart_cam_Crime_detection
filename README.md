@@ -8,3 +8,24 @@ Smart surveillance camera, alert police in case of weapon detection for crime pr
 1. opencv
 1. pygame
 1. matplotlib
+
+## Link to custom dataset
+> The naming convensions of the directories is changed to iterate through them , dictionaries can be used to but the found this easier
+
+[Custom dataset](https://drive.google.com/file/d/1SRxzPoi7Ht17So0btrtITTnipunrkKHf/view?usp=sharing)
+
+## Link to orignal dataset
+> This is the dataset is from kaggle
+
+[Orignal dataset](https://www.kaggle.com/mohamedmaher1997/weapons)
+
+### Bargraph of the classes of dataset
+
+![Bargraph]()
+
+
+## Results of the model
+
+![Accuracy]()
+
+![Loss]()
