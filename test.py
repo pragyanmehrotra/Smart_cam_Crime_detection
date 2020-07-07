@@ -8,7 +8,35 @@ from playsound import playsound
 #import datetime displaying the current date and time
 import datetime
 import pygame
+
+import smtplib
+from os.path import basename
+from email.utils import formatdate
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.mime.multipart import MIMEMultipart
+from email.mime.application import MIMEApplication
+from email.mime.base import MIMEBase 
 import time
+import geocoder
+
+def sendMail(FROM, PASS, TO, weapon, attachment = None):
+	server = smtplib.SMTP('smtp.gmail.com', 587)
+	server.starttls()
+	server.login(FROM,PASS)
+	msg = MIMEMultipart()
+	msg['Subject'] = '[ALERT] ' + weapon + ' detected'
+	msg['From'] =  FROM
+	msg['To'] = TO
+	g = geocoder.ip('me')
+	body = 'A ' + weapon  + ' was detected around ' + str(formatdate(localtime = True)) + ' at  latitude: ' + str(g.latlng[0]) + " longitude: " + str(g.latlng[1])
+	msg.attach(MIMEText(body, 'plain'))
+	if(attachment != None):
+		with open(attachment, 'rb') as fil:
+			part = MIMEApplication(fil.read(), Name = basename(attachment))
+		part['Content-Disposition'] = 'attachment; filename="%s"' % basename(attachment)
+		msg.attach(part)
+	server.sendmail(FROM, TO, msg.as_string())
 
 
 width = 640
